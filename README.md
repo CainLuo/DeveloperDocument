@@ -6,7 +6,9 @@
 - [打包静态库](#打包静态库)
   - [脚本版本](#脚本版本)
   - [非脚本版本](#非脚本版本)
-- [使用系统自带库实现扫码](#使用系统自带库实现扫码)
+- [使用《AVFoundation》实现扫码](#使用《AVFoundation》实现扫码)
+- [《CocoaPods》安装以及使用](#《CocoaPods》安装以及使用)
+- [界面调试工具《Reveal》](#界面调试工具《Reveal》)
 
 ---
 
@@ -52,10 +54,20 @@
 
 ---
 
-# <p align="center">使用系统自带库实现扫码</p>
+# <p align="center">使用《AVFoundation》实现扫码</p>
 
 [使用AVFoundation实现扫码工程](https://github.com/CainRun/CALScanQRCode)
 
 [使用AVFoundation实现扫码说明](https://github.com/CainRun/iOSDeveloperDocument/blob/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E4%BD%BF%E7%94%A8AVFoundation%E5%AE%9E%E7%8E%B0%E6%89%AB%E7%A0%81%20/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E4%BD%BF%E7%94%A8AVFoundation%E5%AE%9E%E7%8E%B0%E6%89%AB%E7%A0%81/iOS%E5%AD%A6%E4%B9%A0%EF%BC%9A%E4%BD%BF%E7%94%A8AVFoundation%E5%AE%9E%E7%8E%B0%E6%89%AB%E7%A0%81.md)
 
+---
 
+# <p align="center">《CocoaPods》安装以及使用</p>
+
+[CocoaPods安装以及使用说明](https://github.com/CainRun/iOSDeveloperDocument/blob/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E3%80%8ACocoaPods%E3%80%8B%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E3%80%8ACocoaPods%E3%80%8B%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E3%80%8ACocoaPods%E3%80%8B%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md)
+
+---
+
+# <p align="center">界面调试工具《Reveal》</p>
+
+[界面调试工具《Reveal》说明](https://github.com/CainRun/iOSDeveloperDocument/blob/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E7%95%8C%E9%9D%A2%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E3%80%8AReveal%E3%80%8B/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E7%95%8C%E9%9D%A2%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E3%80%8AReveal%E3%80%8B/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E7%95%8C%E9%9D%A2%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E3%80%8AReveal%E3%80%8B.md)
