@@ -86,7 +86,7 @@
 
 ![15  | center | 720x0](./15.png)
 
-> 好了, 我的菊花包住了, 图标出来了, 把我吓了一身冷汗
+> 好了, 我的菊花保住了, 图标出来了, 把我吓了一身冷汗
 > 
 > 图标出来了, 我们就要给这个**`item`**添加点击事件了, 做什么好呢, 总不可能让我去导个微信微博等SDK进来演示, 毕竟还要去申请**`AppID`**和**`AppKey`**呢, 我们来个弹框吧~~~
 >
@@ -104,6 +104,8 @@
 
 ---
 ###GitHub工程地址
+
+工程地址: https://github.com/CainRun/iOSDeveloperDocument/tree/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E3%80%8A%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E7%9A%84UIActivityViewController%E5%92%8CUIActivity%E8%BF%9B%E8%A1%8C%E5%86%85%E5%AE%B9%E5%88%86%E4%BA%AB%E3%80%8B/UIActivityViewControllerDemo
 
 ---
 ### 结束语
