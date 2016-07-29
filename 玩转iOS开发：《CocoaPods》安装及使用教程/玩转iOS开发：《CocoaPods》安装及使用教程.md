@@ -1,6 +1,15 @@
 # <center>玩转iOS开发：《CocoaPods》安装及使用教程</center>
 
-[TOC]
+### 目录
+
+- [作者感言](#作者感言)
+- [介绍](#介绍)
+- [什么是CocoaPods](#什么是CocoaPods)
+- [CocoaPods的核心组件](#CocoaPods的核心组件)
+- [更换Ruby源](#更换Ruby源)
+- [安装CocoaPods](#安装CocoaPods)
+- [使用CocoaPods](#使用CocoaPods)
+- [升级CocoaPods](#升级CocoaPods)
 
 ---
 
@@ -16,7 +25,7 @@
 <p align="right">350116542: 腾讯QQ</p>
 
 ---
-###前言
+###介绍
 > 在**`iOS`**项目中使用第三方类库可以说是非常常见的事，但是要正确地配置他们有时候是非常繁琐的事情，幸运的是**`CocoaPods`**是一个很好的解决方案。
 
 ---
@@ -25,7 +34,7 @@
 
 > **`CocoaPods`**意义体现在两个方面。
 > * 第一，在引入第三方库时它可以自动为我们完成各种各样的配置，包括配置编译阶段、连接器选项、甚至是**`ARC`**环境下的**`-fno-objc-arc`**配置等。
-> 
+>
 > * 第二，使用**`CocoaPods`**可以很方便地查找新的第三方库，这些类库是比较“标准的”，而不是网上随便找到的，这样可以让我们找到真正好用的类库。
 
 > 接下来我们将介绍**`CocoaPods`**的使用。
@@ -38,7 +47,7 @@
 > * **`CocoaPods/CocoaPods`**
 > * **`CocoaPods/Core`**
 > * **`CocoaPods/Xcodeproj`**
-	
+
 > **`CocoaPods / CocoaPod`**：这是面向用户的组件，每当执行一个pod命令时，这个组件将被激活。它包括了所有实用**`CocoaPods`**的功能，并且还能调用其他**`gem`**包来执行任务。 
 
 > **`CocoaPods / Core`**：**`Core gem`**提供了与**`CocoaPods`**相关的文件（主要是**`podfile`**和**`podspecs`**）的处理。 
@@ -50,7 +59,7 @@
 > **`CocoaPods / Xcodeproj`**：这个包负责处理工程文件，它能创建以及修改**`.xcodeproj`**文件和**`.xcworkspace`**文件。它也可以作为一个独立的包使用，当你要编写修改项目文件的脚本时，可以考虑使用**`CocoaPods/Xcodeproj`**。
 
 ---
-###CocoaPods安装步骤
+###更换Ruby源
 
 > 检查**`Ruby`**环境，一般来讲**`Mac OS`**都是自带**`Ruby`**环境的，在Terminal中输入命令即可查看**`Ruby`**的版本号
 
@@ -92,7 +101,7 @@ sudo gem install cocoapods
 
 
 > 安装完成之后就会有以下的提示
-![5 | center | 1080x0](./5.png)
+> ![5 | center | 1080x0](./5.png)
 
 
 > 如果你不确定自己是否安装成功, 可以输入下面这个命令去查看
@@ -109,7 +118,7 @@ pod
 ###使用CocoaPods
 
 > 创建**`Xcode`**项目(怎么创建**`Xcode`**项目这里我就不说了), 然后打开**`Terminal`**直接**`cd`**到工程的根目录中, 这里我使用一个**`Demo`**
-![7 | center | 1080x0](./7.png)
+> ![7 | center | 1080x0](./7.png)
 
 
 > Xcode项目中创建Podfile文件, 且编辑
