@@ -18,7 +18,7 @@
 
 ---
 ### 作者感言
-> 上次我们知道了单例模式是怎么回事, 现在我们来探讨一下什么叫做**`代理模式`**.
+> 上次我们知道了单例模式是怎么回事, 现在我们来探讨一下什么叫做**`单例模式`**.
 >
 > 其实所谓的代理模式在我们日常生活中非常的常见, 比如买车, 各式各样的牌子都有, 但这些汽车生产商又不可能自己掏钱在每个城市的每个角落都开一家自己的直营店, 所以他们会去招一些第三方的代理商进行分销, 而这个就是我们今天所要说的**`代理模式`**.
 >
@@ -68,14 +68,16 @@ Cain(罗家辉)
 ### 声明代理方法
 
 > 在这里声明两个代理方法, 但他们有所区别, 一个是必须实现, 一个是可选类型的, 由于方法名自注释, 我这里就不添加注释了.
+>
+> 代码:
 
-```objectivec
+```objective-c
 @required
 - (void)audiManufacturer:(AudiManufacturer *)audiManufacturer
            orderQuantity:(NSInteger)orderQuantity;
 ```
 
-```objectivec
+```objective-c
 @optional
 - (void)audiManufacturer:(AudiManufacturer *)audiManufacturer
             audiDelegateInfo:(NSString *)audiDelegateInfo;
@@ -85,22 +87,111 @@ Cain(罗家辉)
 
 ![5 | center | 1080x0](./5.png)
 
+> 代码: 
+
+```Objective-c
+#import <Foundation/Foundation.h>
+
+@class AudiManufacturer;
+
+@protocol AudiManufacturerDelegate <NSObject>
+
+@required
+- (void)audiManufacturer:(AudiManufacturer *)audiManufacturer
+           orderQuantity:(NSInteger)orderQuantity;
+
+@optional
+- (void)audiManufacturer:(AudiManufacturer *)audiManufacturer
+            audiDelegateInfo:(NSString *)audiDelegateInfo;
+@end
+
+@interface AudiManufacturer : NSObject
+
+@property (nonatomic, weak) id<AudiManufacturerDelegate> delegate;
+
+- (void)buyCarCount:(NSInteger)count;
+- (void)buyCarModel:(NSString *)model;
+
+@end
+```
+
 ---
 ### 内部实现代理方法
 > 在内部实现两个对方开放的方法
 
-```objectivec
-- (void)buyCarCount:(NSInteger)count;
-- (void)buyCarModel:(NSString *)model;
-```
-
 ![6 | center | 1080x0](./6.png)
+
+> 代码: 
+
+```Objective-c
+#import "AudiManufacturer.h"
+
+@implementation AudiManufacturer
+
+- (void)buyCarCount:(NSInteger)count {
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(audiManufacturer:orderQuantity:)]) {
+        [self.delegate audiManufacturer:self orderQuantity:count];
+    }
+}
+
+- (void)buyCarModel:(NSString *)model {
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(audiManufacturer:audiDelegateInfo:)]) {
+        [self.delegate audiManufacturer:self audiDelegateInfo:model];
+    }
+}
+
+@end
+```
 
 ---
 ### 外部调用代理
 > 代理类以及代理方法我们已经完成了, 接下来我们就要在外部去实现了
 
 ![7 | center | 1080x0](./7.png)
+
+> 代码: 
+
+```Objective-c
+#import "ViewController.h"
+#import "AudiManufacturer.h"
+
+@interface ViewController () <AudiManufacturerDelegate>
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    AudiManufacturer *audiManufacturer = [[AudiManufacturer alloc] init];
+    
+    audiManufacturer.delegate = self;
+    
+    [audiManufacturer buyCarCount:2];
+    [audiManufacturer buyCarModel:@"Q7"];
+}
+
+#pragma mark - 必须实现的方法
+- (void)audiManufacturer:(AudiManufacturer *)audiManufacturer
+           orderQuantity:(NSInteger)orderQuantity {
+    
+    NSLog(@"奥迪生产商为: %@", audiManufacturer);
+    NSLog(@"购买的数量为: %zd", orderQuantity);
+}
+
+#pragma mark - 可选实现的方法
+- (void)audiManufacturer:(AudiManufacturer *)audiManufacturer
+        audiDelegateInfo:(NSString *)audiDelegateInfo {
+    
+    NSLog(@"奥迪生产商为: %@", audiManufacturer);
+    NSLog(@"购买的型号为: %@", audiDelegateInfo);
+}
+
+@end
+```
 
 ![8 | center | 1080x0](./8.png)
 
@@ -122,18 +213,109 @@ Cain(罗家辉)
 
 ![9 | center | 1080x0](./9.png)
 
+> 代码: 
+
+```objective-c
+#import <Foundation/Foundation.h>
+
+@protocol AudiCustomerProtocol <NSObject>
+
+@required
+- (NSString *)isEnoughBuyCar:(NSInteger)money;
+
+@end
+```
 ---
 ### 创建顾客类
 > 创建完协议就要创建顾客了, 并且这个顾客类是必须遵守我们创建的**`Protocol`**, 然后在这个**`Protocol`**里加个判断.
 
 ![10 | cneter | 1080x0](./10.png)
 
+> 代码: 
+
+```Objective-c
+#import <Foundation/Foundation.h>
+#import "AudiCustomerProtocol.h"
+
+@interface Customer : NSObject <AudiCustomerProtocol>
+
+@end
+```
 ![11 | center | 1080x0](./11.png)
+
+> 代码:
+
+```Objective-c
+#import "Customer.h"
+
+@implementation Customer
+
+- (NSString *)isEnoughBuyCar:(NSInteger)money {
+
+    if (money >= 1000000) {
+        
+        return @"您的钱足够购买Q7";
+    }
+    
+    return @"您的钱不足以购买Q7";
+}
+
+@end
+```
 
 
 > 现在我们来初始化一下这个顾客类, 并且校验一下我们所写的**`Protocol`**是否生效.
 
 ![12 | center | 1080x0](./12.png)
+
+> 代码: 
+
+```Objective-c
+#import "ViewController.h"
+#import "AudiManufacturer.h"
+#import "Customer.h"
+
+@interface ViewController () <AudiManufacturerDelegate>
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    AudiManufacturer *audiManufacturer = [[AudiManufacturer alloc] init];
+    
+    audiManufacturer.delegate = self;
+    
+    [audiManufacturer buyCarCount:2];
+    [audiManufacturer buyCarModel:@"Q7"];
+    
+    Customer *customer = [[Customer alloc] init];
+    
+    NSString *string = [customer isEnoughBuyCar:输入你想要的数值];
+    
+    NSLog(@"%@", string);
+}
+
+#pragma mark - 必须实现的方法
+- (void)audiManufacturer:(AudiManufacturer *)audiManufacturer
+           orderQuantity:(NSInteger)orderQuantity {
+    
+    NSLog(@"奥迪生产商为: %@", audiManufacturer);
+    NSLog(@"购买的数量为: %zd", orderQuantity);
+}
+
+#pragma mark - 可选实现的方法
+- (void)audiManufacturer:(AudiManufacturer *)audiManufacturer
+        audiDelegateInfo:(NSString *)audiDelegateInfo {
+    
+    NSLog(@"奥迪生产商为: %@", audiManufacturer);
+    NSLog(@"购买的型号为: %@", audiDelegateInfo);
+}
+
+@end
+```
 
 > 先输入**`10000`**
 
