@@ -1,4 +1,4 @@
-# <center>玩转iOS开发：《CocoaPods》安装及使用教程</center>
+# <p align="center">玩转iOS开发：《CocoaPods》安装及使用教程</p>
 
 ### 目录
 

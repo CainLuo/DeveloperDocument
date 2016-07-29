@@ -1,4 +1,4 @@
-#<center>玩转iOS开发：界面调试工具《Reveal》</center>
+#<p align="center">玩转iOS开发：界面调试工具《Reveal》</p>
 
 ### 目录
 
