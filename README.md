@@ -14,7 +14,7 @@
 - [功能库](#功能库)
   - [使用《AVFoundation》实现扫码](#使用《AVFoundation》实现扫码)
   - [《使用自定义UIActivity进行内容分享》](#《使用自定义UIActivity进行内容分享》)
-  - [iOS 8新特性《Today Extension》工程](#iOS 8新特性《Today Extension》工程)
+  - [iOS 8新特性《Today Extension》](#iOS 8新特性《Today Extension》)
   - [打包静态库](#打包静态库)
     - [脚本版本](#脚本版本)
     - [非脚本版本](#非脚本版本)
