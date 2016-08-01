@@ -15,6 +15,7 @@
   - [使用《AVFoundation》实现扫码](#使用《AVFoundation》实现扫码)
   - [《使用自定义UIActivity进行内容分享》](#《使用自定义UIActivity进行内容分享》)
   - [iOS 8新特性《Today Extension》](#iOS 8新特性《Today Extension》)
+  - [iOS 8新特性《Share Extension》](#iOS 8新特性《Share Extension》)
   - [打包静态库](#打包静态库)
     - [脚本版本](#脚本版本)
     - [非脚本版本](#非脚本版本)
@@ -99,6 +100,14 @@
 
 [iOS 8新特性《Today Extension》说明](https://github.com/CainRun/TodayExtensionExample/blob/master/README.md)
 
+---
+### iOS 8新特性《Share Extension》
+
+[iOS 8新特性《Share Extension》纯文本工程](https://github.com/CainRun/ShareExtensionDemo/tree/master/ShareExtension%E7%BA%AF%E6%96%87%E5%AD%97)
+
+[iOS 8新特性《Share Extension》图片+文本工程](https://github.com/CainRun/ShareExtensionDemo/tree/master/ShareExtension%E5%9B%BE%E7%89%87%2B%E6%96%87%E5%AD%97)
+
+[iOS 8新特性《Share Extension》说明](https://github.com/CainRun/ShareExtensionDemo/blob/master/README.md)
 ---
 ## <p align="center">打包静态库</p>
 
