@@ -93,11 +93,11 @@
 [使用AVFoundation实现扫码说明](https://github.com/CainRun/CALScanQRCode/blob/master/README.md)
 
 ---
-###《使用自定义UIActivity进行内容分享》
+###使用自定义《UIActivity》进行内容分享
 
-[《使用自定义UIActivity进行内容分享》工程](https://github.com/CainRun/ActivityControllerDemo/tree/master/UIActivityViewControllerDemo)
+[使用自定义《UIActivity》进行内容分享工程](https://github.com/CainRun/ActivityControllerDemo/tree/master/UIActivityViewControllerDemo)
 
-[《使用自定义UIActivity进行内容分享》文档](https://github.com/CainRun/ActivityControllerDemo/blob/master/README.md)
+[使用自定义《UIActivity》进行内容分享文档](https://github.com/CainRun/ActivityControllerDemo/blob/master/README.md)
 
 ---
 ### iOS 8新特性《Today Extension》
