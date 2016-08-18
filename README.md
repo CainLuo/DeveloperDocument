@@ -14,7 +14,7 @@
   - [CALToolBarListView](#CALToolBarListView)
 - [功能库](#功能库)
   - [使用《AVFoundation》实现扫码](#使用《AVFoundation》实现扫码)
-  - [《使用自定义UIActivity进行内容分享》](#《使用自定义UIActivity进行内容分享》)
+  - [使用自定义《UIActivity》进行内容分享](#使用自定义《UIActivity》进行内容分享)
   - [iOS 8新特性《Today Extension》](#iOS 8新特性《Today Extension》)
   - [iOS 8新特性《Share Extension》](#iOS 8新特性《Share Extension》)
   - [打包静态库](#打包静态库)
