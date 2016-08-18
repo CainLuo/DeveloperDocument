@@ -9,11 +9,12 @@
 - [设计模式](#设计模式)
   - [单例模式](#单例模式)
   - [代理模式](#代理模式)
+  - [工厂模式](#工厂模式)
 - [UI库](#UI库)
   - [CALToolBarListView](#CALToolBarListView)
 - [功能库](#功能库)
   - [使用《AVFoundation》实现扫码](#使用《AVFoundation》实现扫码)
-  - [使用自定义UIActivity进行内容分享](#使用自定义UIActivity进行内容分享)
+  - [《使用自定义UIActivity进行内容分享》](#《使用自定义UIActivity进行内容分享》)
   - [iOS 8新特性《Today Extension》](#iOS 8新特性《Today Extension》)
   - [iOS 8新特性《Share Extension》](#iOS 8新特性《Share Extension》)
   - [打包静态库](#打包静态库)
@@ -65,6 +66,13 @@
 [代理模式工程地址](https://github.com/CainRun/DesignPattern/tree/master/ProxyPattern/ProxyPattern%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6)
 
 ---
+### 工厂模式
+
+工厂模式工程地址:[工厂模式工程](https://github.com/CainRun/DesignPattern/tree/master/FactoryPattern/FactoryPattern%E5%B7%A5%E7%A8%8B)
+
+工厂模式说明地址:[工厂模式说明](https://github.com/CainRun/DesignPattern/blob/master/FactoryPattern/FactoryPattern%E8%AF%B4%E6%98%8E/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E3%80%8AiOS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20%E2%80%94%20%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E4%B8%8E%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E3%80%8B.md)
+
+---
 
 # <p align="center">UI库</p>
 
@@ -85,7 +93,7 @@
 [使用AVFoundation实现扫码说明](https://github.com/CainRun/CALScanQRCode/blob/master/README.md)
 
 ---
-### 使用自定义UIActivity进行内容分享
+###《使用自定义UIActivity进行内容分享》
 
 [《使用自定义UIActivity进行内容分享》工程](https://github.com/CainRun/ActivityControllerDemo/tree/master/UIActivityViewControllerDemo)
 
@@ -108,7 +116,6 @@
 [iOS 8新特性《Share Extension》图片+文本工程](https://github.com/CainRun/ShareExtensionDemo/tree/master/ShareExtension%E5%9B%BE%E7%89%87%2B%E6%96%87%E5%AD%97)
 
 [iOS 8新特性《Share Extension》说明](https://github.com/CainRun/ShareExtensionDemo/blob/master/README.md)
-
 ---
 ## <p align="center">打包静态库</p>
 
