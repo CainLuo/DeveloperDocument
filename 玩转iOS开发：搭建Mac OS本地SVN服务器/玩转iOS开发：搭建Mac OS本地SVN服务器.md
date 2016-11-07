@@ -8,7 +8,7 @@
     sudo svnadmin create /Users/imac/Documents/svn/MyCode
 ```
 
-![1]()
+![1](https://raw.githubusercontent.com/CainRun/DeveloperDocument/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E6%90%AD%E5%BB%BAMac%20OS%E6%9C%AC%E5%9C%B0SVN%E6%9C%8D%E5%8A%A1%E5%99%A8/1.png)
 
 ---
 ### 配置SVNServe.conf文件
@@ -26,7 +26,7 @@ sudo vim /Users/imac/Documents/svn/MyCode/conf/svnserve.conf
 > * password-db = passwd
 > * authz-db = authz
 
-![2]()
+![2](https://raw.githubusercontent.com/CainRun/DeveloperDocument/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E6%90%AD%E5%BB%BAMac%20OS%E6%9C%AC%E5%9C%B0SVN%E6%9C%8D%E5%8A%A1%E5%99%A8/2.png)
 
 ---
 ### 配置Passwd文件
@@ -41,7 +41,7 @@ sudo vim /Users/imac/Documents/svn/MyCode/conf/svnserve.conf
     admin=123456
 ```
 
-![3]()
+![3](https://raw.githubusercontent.com/CainRun/DeveloperDocument/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E6%90%AD%E5%BB%BAMac%20OS%E6%9C%AC%E5%9C%B0SVN%E6%9C%8D%E5%8A%A1%E5%99%A8/3.png)
 
 ---
 ### 配置Authz文件
@@ -60,7 +60,7 @@ admins=admin
 @admins=rw
 ```
 
-![4]()
+![4](https://raw.githubusercontent.com/CainRun/DeveloperDocument/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E6%90%AD%E5%BB%BAMac%20OS%E6%9C%AC%E5%9C%B0SVN%E6%9C%8D%E5%8A%A1%E5%99%A8/4.png)
 
 ---
 ### 启动SVN服务器
@@ -81,7 +81,7 @@ admins=admin
 ```
 > 或者是打开活动监视器搜索之后在咔擦掉
 
-![5]()
+![5](https://raw.githubusercontent.com/CainRun/DeveloperDocument/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E6%90%AD%E5%BB%BAMac%20OS%E6%9C%AC%E5%9C%B0SVN%E6%9C%8D%E5%8A%A1%E5%99%A8/5.png)
 
 ---
 ### 首次导入工程文件到SVN服务器
@@ -136,7 +136,7 @@ svn: E000013: Can't open file '/Users/xxx/Documents/svn/XXX/db/txn-current-lock'
 > 这个错误一般来说就是你的**svn**文件夹权限没开放, 只要进入到你的**SVN**目录下, 输入下面的命令就可以解决这个问题了.
 > 我这边的目录是**/Users/imac/Documents/svn/MyCode**
 
-!(10)[]
+![6](https://raw.githubusercontent.com/CainRun/DeveloperDocument/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E6%90%AD%E5%BB%BAMac%20OS%E6%9C%AC%E5%9C%B0SVN%E6%9C%8D%E5%8A%A1%E5%99%A8/6.png)
 
 ```vim
     /*MyCode就是你创建SVN服务器的文件夹*/
