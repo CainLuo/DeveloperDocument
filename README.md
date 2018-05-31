@@ -44,6 +44,12 @@
 
 [CocoaPods安装以及使用说明](https://github.com/CainRun/DeveloperDocument/blob/master/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E3%80%8ACocoaPods%E3%80%8B%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/%E7%8E%A9%E8%BD%ACiOS%E5%BC%80%E5%8F%91%EF%BC%9A%E3%80%8ACocoaPods%E3%80%8B%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md)
 
+
+
+### CocoaPods 进阶使用
+
+[创建CocoaPods开发库](https://github.com/CainLuo/DeveloperDocument/blob/master/玩转iOS开发：《创建CocoaPods开发库》/玩转iOS开发：《创建CocoaPods开发库》.md)
+
 ---
 
 ### 界面调试工具《Reveal》
