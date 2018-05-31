@@ -2,6 +2,25 @@
 
 [TOC]
 
+想了想, 发现自己好久都没有写新的文章了, 还有一些朋友跑过来说我的掘金好久没更新了, 其实不是的, 我一直在维护并更新[玩转iOS开发：自己造的轮子《CLUIKit》](https://juejin.im/post/5a97743b5188255efc5f8df5)和[玩转iOS开发：自己造的轮子《CLFoundation》](https://juejin.im/post/5a9648f251882543de215dc3), 只是没有文章的更新日期, 这个没法看到我更新文章而已, 希望掘金考虑考虑加上个更新时间~~
+
+
+
+## 请他喝杯星爸爸
+如果您觉得挺赞的话, 可以我喝杯星爸爸, 谢谢啦~
+
+![支付宝](https://raw.githubusercontent.com/CainRun/PayProject/master/WeChatPay-Objective-C/Images/支付宝QRC.jpg)
+
+
+这段时间除了忙着做项目之外, 还有一件事就是制作`CocoaPods`库, 这个东西虽然好用, 不研究还好, 一研究就会发现, 真的是.....
+
+
+![真让人头大](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/biaoqing1.jpg)
+
+搞了一两天, 搜了`N`多个百度和谷歌, 也咨询了很多大佬, 终于捣鼓出来了, 下面就直接上文章, 不那么多废话了.
+
+
+
 ## 创建podspec文件
 
 使用终端找到需要创建`CocoaPods`开发库的文件夹
@@ -10,7 +29,7 @@
 cd Project文件夹
 ```
 
-![1](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/1.gif)
+![1](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/1.gif)
 
 
 
@@ -20,7 +39,7 @@ cd Project文件夹
 pod spec create 库名
 ```
 
-![2](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/2.png)
+![2](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/2.png)
 
 
 
@@ -30,7 +49,7 @@ pod spec create 库名
 
 
 
-![3](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/3.png)
+![3](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/3.png)
 
 
 
@@ -57,7 +76,7 @@ pod spec create 库名
 
 这里我们举个例子, [CLUIKit.podspec](#https://github.com/CainLuo/CLUIKit/blob/master/CLUIKit.podspec)的写法, 这里只依赖了三个库, [MJRefresh](https://github.com/CoderMJLee/MJRefresh), [CLFoundation](https://github.com/CainLuo/CLFoundation)和[Masonry](https://github.com/SnapKit/Masonry).
 
-![4](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/4.png)
+![4](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/4.png)
 
 
 
@@ -74,15 +93,15 @@ pod spec create 库名
 
 这里我们可以找到最经典的案例就是[AFNetworking.podspec](https://github.com/AFNetworking/AFNetworking/blob/master/AFNetworking.podspec), 如果这个库全都是我们自己写的, 那么可以参照着来写:
 
-![5](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/5.png)
+![5](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/5.png)
 
-![6](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/6.png)
+![6](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/6.png)
 
 
 
 但如果我们是要依赖于第三方的库或者是`Framework`, 那这里可能就不适合了, 比如[CLMapKit.podspec](https://github.com/CainLuo/CLMapKit/blob/master/CLMapKit.podspec), 这里依赖了`GoogleMaps`, 并且未来可能还会兼容其他的地图库, 那么我们就必须拆分成`N`个子模块, 并且要针对来编写:
 
-![7](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/7.png)
+![7](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/7.png)
 
 
 
@@ -115,7 +134,7 @@ pod spec create 库名
 pod spec lint
 ```
 
-![8](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/8.png)
+![8](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/8.png)
 
 
 
@@ -133,7 +152,7 @@ pod spec lint
 
 首先我们需要去创建一个`Git`仓库, 大多数老铁选择的是`GitHub`, 怎么创建, 怎么`clone`, 这里就不解释了, 我们把代码上传上`GitHub`之后会有一个酱紫的界面:
 
-![9](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/9.png)
+![9](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/9.png)
 
 所有代码文件及`podspec`文件上传了之后, 我们就继续下一步.
 
@@ -195,7 +214,7 @@ git push origin --delete 版本号
 git tag
 ```
 
-![10](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/10.png)
+![10](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/10.png)
 
 
 
@@ -205,7 +224,7 @@ git tag
 git show origin
 ```
 
-![11](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/11.png)
+![11](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/11.png)
 
 > **暂时没找到如何查看远程仓库`Tag`的命令, 只能用上面的方式了.**
 
@@ -219,13 +238,13 @@ git show origin
 pod trunk register 邮箱 '昵称'
 ```
 
-![12](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/12.png)
+![12](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/12.png)
 
 
 
 做完这个操作只有, 你的邮箱会收到一封邮件, 我们打开了那个链接之后, 如果网站显示了一张图, 上面写着`You can go back to your terminal new.`, 那我们就可以继续下一步操作, 发布我们的`CocoaPods`库了.
 
-![13](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/13.png)
+![13](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/13.png)
 
 
 
@@ -257,7 +276,7 @@ pod trunk push --allow-warnings --verbose
 
 如果我们在检测时发现了图中的错误:
 
-![14](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/14.png)
+![14](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/14.png)
 
 那我们就需要加上另一个关键词:
 
@@ -269,7 +288,7 @@ pod trunk push --allow-warnings --use-libraries
 
 最后我们输入完所有命令, 看到了图中所示, 那就说明了我们的库发推送成功了:
 
-![15](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/15.png)
+![15](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/15.png)
 
 
 
@@ -277,7 +296,7 @@ pod trunk push --allow-warnings --use-libraries
 
 当我们推送完库之后直接去`pod search ProjectName`, `CocoaPods`会提示找不到, 原因是因为本地的`CocoaPods search_index.json`文件没有更新到, 这个时候我们可以手动删除该文件, 再重新去搜索, 就可以搜索到了.
 
-![17](/Users/cainluo/Documents/iOS技术开发部《创建CocoaPods开发库》/17.png)
+![17](https://raw.githubusercontent.com/CainLuo/DeveloperDocument/master/玩转iOS开发：《创建CocoaPods开发库》/17.png)
 
 文件路径一般是在:`/Users/您的用户名/Library/Caches/CocoaPods/ `
 
@@ -290,3 +309,9 @@ pod trunk push --allow-warnings --use-libraries
 ## 补充
 
 关于更多的`CocoaPods`的标签可以到[CocoaPods Guides](https://guides.cocoapods.org)里查询到, 如果是遇到一些`bug`可以到[GitHub CocoPods](https://github.com/CocoaPods/CocoaPods)留下你的`Issues`.
+
+
+## 疑问
+在研究`CocoaPods`的时候, 我有一个疑问, 怎么创建一个`podspec`文件, 去关联不同的第三方库, 并且不会引起他们之间的冲突, 比`如高德2D地图`和`高德3D地图`就会引起`Framework`的冲突.
+
+并且可以在这个大的`podspec`里可以自由的选择`高德2D地图`和`高德3D地图`导入到工程里, 不知道是`CocoaPods`不支持, 还是我还没研究透, 如果可以的话, 希望老铁们给我解惑解惑.
